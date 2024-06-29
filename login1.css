@@ -1,0 +1,46 @@
+
+*{
+    margin: 0%;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 25px;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,0.75)),url(fro.jpg);
+    background-size: cover;
+    background-position: center;}
+.log{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    
+}
+#name,#pass{
+    border-radius: 10px 10px;
+    background-color: transparent;
+}
+#name:hover,#pass:hover{
+    background-color: #fff;
+}
+.log a{
+    text-decoration: none;
+}
+button{
+    border-radius: 10px;
+    width: 90px;
+    background-color:transparent;
+}
+button:hover{
+    background-color: green;
+}
+p{
+    font-size: 15px;
+ 
+}

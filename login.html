@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='login1.css')}}">
+</head>
+<body>
+    <div class="log">
+        <form action="{{ url_for('login') }}" method="post">
+        <h2>STAFF LOGIN</h2><br>
+        <label for="name">USERNAME</label><br>
+        <input id="name" type="text"name="name" required><br>
+        <label for="pass">PASSWORD</label><br>
+        <input id="pass" type="password" name="pass"  required><br><br>
+        <button type="submit">LOGIN</button><br>
+        <p style="text-decoration: none;"> to create account?<a href="{{url_for('sign_up')}}">sign_up</a></p>
+        <br> 
+    </form>
+    {% if error_msg %}
+   <p style="font-size: 20px; transition: all 0.5;">{{error_msg}}</p>
+   {% endif %} 
+    </div>
+    
+</body>
+</html>

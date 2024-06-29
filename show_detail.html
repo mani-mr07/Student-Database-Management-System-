@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Details</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='show_detail1.css')}}">
+</head>
+<body>
+    <div class="getting" >
+        <div class="navbar">
+            <ul>
+                <li><a href="{{ url_for('intro') }}" style="font-size: 20px;">Home</a></li>
+                <li><a href="{{ url_for('home') }}"style="font-size: 20px;">Previous page</a></li>
+                <li><a href="{{ url_for('login') }}"style="font-size: 20px;">Logout</a></li>
+            </ul>
+        </div>
+    <form id="myform" action="/show_detail" method="get">
+        <label for="filter">Department Name</label><br>
+        <select name="filter" id="filter">
+            <option value="">Default</option>
+            <option value="CSE">CSE</option>
+            <option value="MECH">MECH</option>
+            <option value="Civil">Civil</option>
+            <option value="EEE">EEE</option>
+            <option value="ECE">ECE</option>
+        </select>
+        <br>
+        <label for="sort_col">Sort By:</label>
+        <br>
+        <select name="sort_col" id="sort_col">
+            <option value="">Default</option>
+            <option value="name">Name</option>
+            <option value="reg_number">Register Number</option>
+        </select>
+        <br>
+        <label for="sort_order" >Choose The order:</label>
+        <br>
+        <select name="sort_order" id="sort_order">
+            <option value="">Default</option>
+            <option value="ASC">Ascending</option>
+            <option value="DESC">Descending</option>
+        </select><br><br>
+        <button type="submit" style="height: 30px;width: 70px;">Submit</button><br><br>
+    </form>
+    
+    </div>
+    <br>
+
+    <div class="show">
+    <h2>Students Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Register Number</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in data %}
+                <tr>
+                    <td>{{ student[1] }}</td>
+                    <td>{{ student[2] }}</td>
+                    <td>{{ student[3] }}</td>
+                    <td>{{ student[4] }}</td>
+                    <td><a href="{{ url_for('update_student', student_id=student[0]) }}"><button>UPDATE</button></a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student Details</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='update_student1.css')}}">
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="{{ url_for('intro') }}" style="font-size: 20px;">Home</a></li>
+            <li><a href="{{ url_for('home') }}"style="font-size: 20px;">Previous page</a></li>
+            <li><a href="{{ url_for('show_detail') }}"style="font-size: 20px;">Logout</a></li>
+        </ul>
+    </div>
+    <h1 style="text-align: center;-webkit-text-fill-color:black;">Update Student Details</h1><br>
+
+    <div class="update-form">
+        <form action="{{ url_for('update_student', student_id=student[0]) }}" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value="{{ student[1] }}"><br><br>
+
+            <label for="regNum">Register Number:</label><br>
+            <input type="text" id="regNum" name="regNum" value="{{ student[2] }}"><br><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" value="{{ student[3] }}"><br><br>
+
+            <label for="department">Department:</label><br>
+            <input type="text" id="department" name="department" value="{{ student[4] }}"><br><br>
+
+            <button type="submit" >Update</button><br>
+            {% if erro_msg %}
+    <p>{{error_msg}}</p>
+    {% endif %}
+        </form>
+    </div>
+    
+</body>
+</html>

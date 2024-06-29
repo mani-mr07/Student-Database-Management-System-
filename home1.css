@@ -1,0 +1,68 @@
+*{
+    margin: 0%;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,0.75)),url(fro.jpg);
+    background-size: cover;
+    background-position: center;}
+    .navbar ul{
+        -webkit-text-fill-color: white;
+       list-style-type: none;
+       margin-left: 65%;
+       padding: 20px 15px;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 40px;
+       }
+       .navbar ul a{
+           text-decoration: none;
+           text-transform: uppercase;
+           -webkit-text-fill-color: #fff;
+       }
+       .navbar ul li a:hover{
+           font-weight: 110;
+           -webkit-text-fill-color: blue;
+       }
+
+    .total {
+        backdrop-filter: blur(10px);
+        width: 400px;
+        height: 270px;
+        border: 4px solid rgba(225, 225, 225,.5); 
+        background-color:transparent;
+        border-radius: 10px;
+        padding: 40px 20px ;
+        margin: auto;
+        color: #fff;
+        text-align: center;
+    }
+    button{
+        background-color: transparent;
+        height: 30px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    button:hover{
+        height: 40px;
+        backdrop-filter: blur(20px);
+        width:auto;
+    }
+    h1{
+        font-size: 50px;
+    }
+    p{
+        font-size: 25px;
+
+    }
+    p:hover{
+        font-size: 30px;
+    }
+
+

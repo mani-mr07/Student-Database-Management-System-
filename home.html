@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='home1.css')}}">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="{{ url_for('intro') }}" style="font-size: 20px;">Home</a></li>
+            <li><a href="{{ url_for('intro') }}"style="font-size: 20px;">Previous page</a></li>
+            <li><a href="{{ url_for('login') }}"style="font-size: 20px;">Logout</a></li>
+        </ul>
+    </div>
+    <h1>Student Management System</h1><br><br>
+    <div class="total">
+    <p>ADD STUDENT DETAILS</p>
+    <a href="{{ url_for('add_student') }}"><button>click here</button></a><br><br>
+    <p>DELETE STUDENT DETAILS</p>
+    <a href="{{ url_for('delete_student') }}"><button >click here</button></a><br><br>
+    <p>VIEW USER DETAILS</p>
+    <a href="{{ url_for('show_detail') }}"><button >click here</button></a>
+</div>
+</body>
+</html>

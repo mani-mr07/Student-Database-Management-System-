@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='add_student1.css')}}">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="{{ url_for('intro') }}" style="font-size: 20px;">Home</a></li>
+            <li><a href="{{ url_for('home') }}"style="font-size: 20px;">Previous page</a></li>
+            <li><a href="{{ url_for('login') }}"style="font-size: 20px;">Logout</a></li>
+        </ul>
+    </div>
+   <h1>Student Information</h1> <br>
+   <div class="total">
+   <form action="/add_student" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="regNum">Register Number:</label><br>
+    <input type="text" id="regNum" name="regNum" maxlength="12" minlength="12" required>
+    <br>
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age"minlength="17" maxlength="22" required>
+    <br>
+    <label for="department">Department:</label><br>
+    <select name="department" id="department">
+        <option value="cse">cse</option>
+        <option value="mech">mech</option>
+        <option value="civil">civil</option>
+        <option value="eee">eee</option>
+        <option value="ece">ece</option>
+    </select><br><br>
+    <button type="submit" >Add Student</button><br><br> 
+   </form>
+  
+</div>
+</body>
+</html>
